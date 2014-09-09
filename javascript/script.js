@@ -24,27 +24,27 @@ function findKeyword (expression){
 
 //function that gets all the reviews based on a star
 function starRatingReview (reviews, star) {
-	var expression = new RegExp(star);
+  var expression = new RegExp(star);
 
-	return reviews.filter(function(each){
-		return each.rating.match(expression) !== null;
-	});
+  return reviews.filter(function(each){
+    return each.rating.match(expression) !== null;
+  });
 }
 
 
 var button = document.getElementById("theButton");
 var searchdiv = document.getElementById("search-wrapper")
 button.onclick = function(e) {
-	e.preventDefault();
-	 var value =  button.form.valueId.value;
-	 var expression = new RegExp(value, 'i');
+  e.preventDefault();
+   var value =  button.form.valueId.value;
+   var expression = new RegExp(value, 'i');
    var reviews = findReviews(expression);
    var keyword = [
-   	starRatingReview(reviews, 1),
-   	starRatingReview(reviews, 2),
-   	starRatingReview(reviews, 3),
-   	starRatingReview(reviews, 4),
-   	starRatingReview(reviews, 5),
+    starRatingReview(reviews, 1),
+    starRatingReview(reviews, 2),
+    starRatingReview(reviews, 3),
+    starRatingReview(reviews, 4),
+    starRatingReview(reviews, 5),
    ];
    console.log(reviews);
 
@@ -72,11 +72,11 @@ element.appendChild(valueHeading);
         return a.length + " reviews";
       })
       .style('height', function(a){
-      	if (a.length === 0){
-      		return 0;
-      	} else{
+        if (a.length === 0){
+          return 0;
+        } else{
 
-      	return (a.length/20) + 'em';}})
+        return (a.length/20) + 'em';}})
       .style('background', 'blue');
 
       searchdiv.style.opacity = 0;
