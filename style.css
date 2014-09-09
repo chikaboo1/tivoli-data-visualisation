@@ -1,0 +1,114 @@
+body,html {
+	font-family: 'Old Standard TT', serif;
+	height:100%;
+	width:100%;
+	padding:0;
+	margin:0;
+	
+}
+
+.body {
+  position: relative;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+#main-wrapper {
+display:block;
+width:100%;
+height:100%;
+
+}
+
+#search-wrapper {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width:100%;
+
+
+}
+
+#main-content {
+	width:80%;
+  margin:auto;
+  text-align: left;
+
+}
+
+/*other elements*/
+
+h3 {
+	font-size:2em;
+}
+
+
+
+/*Search Box*/
+
+.search-box {
+	border:0px solid #ffffff;
+	border-bottom:3px solid #dbdbdb;
+	width:70%;
+	font-size:2em;
+	color:black;
+	padding:0.5em 0.5em 0.5em 0;
+	font-family:'Old Standard TT', serif !important;
+}
+
+input:focus {
+outline:0;
+}
+
+#theButton {
+	margin-left:1em;
+	background-image: url(images/search-icon.png);
+	background-size:100% auto;
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 5em;           /* make this the size of your image */
+    width:5em;
+    padding:0;
+    vertical-align: bottom; /* align the text vertically centered */
+}
+
+/*List*/
+
+	#rating-list ul{
+		list-style-type: none;
+		text-decoration:none;
+		padding:0;
+		margin:0;
+
+	}
+
+	#rating-list ul li {
+		display:inline-block;
+		width:17%;
+		vertical-align: top;
+		margin-right:1%;
+		color:white;
+		padding:5px;
+		animation-duration: 3s;
+  		animation-name: grow; 
+	}
+
+	@keyframes grow {
+		from {
+			height:0;
+		}
+	}
+
+@media only screen and (min-width:700px){
+
+
+	#main-content {
+		text-align: center;
+	}
+
+
+}
